@@ -10,6 +10,7 @@
   let opponent = ''
 
   const handleSubmit = async () => {
+    answer = ''
     loading = true
     error = false
 
