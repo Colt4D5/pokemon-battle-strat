@@ -6,7 +6,7 @@
   let loading = false
   let error = false
   let answer = ''
-  let game = ''
+  let game = 'default'
   let opponent = ''
 
   const handleSubmit = async () => {
@@ -60,6 +60,7 @@
   <form on:submit|preventDefault={() => handleSubmit()}>
     <label for="game">Select game: </label>
     <select name="game" id="game" bind:value={game}>
+      <option selected disabled value="default">Select a Pokémon game</option>
       <option value="blue">Pokémon Blue</option>
       <option value="red">Pokémon Red</option>
       <option value="yellow">Pokémon Yellow</option>
@@ -68,7 +69,7 @@
     </select>
     <div class="field-group">
       <label for="opponent">Opponent: </label>
-      <input type="text" name="opponent" id="opponent" bind:value={opponent}>
+      <input type="text" name="opponent" id="opponent" bind:value={opponent} placeholder="Type an opponent">
     </div> 
     <div class="field-group">
       <input type="submit" name="submit" id="submit" value="Submit">
@@ -89,6 +90,9 @@
 </main>
 
 <style>
+  main {
+    width: min(85%, 800px);
+  }
   .loading-wrapper .spinner {
     width: 50px;
     aspect-ratio: 1 / 1;
