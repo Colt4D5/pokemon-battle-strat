@@ -76,9 +76,35 @@
   </form>
   <div id="answer">
     <h2>Recommended Strat:</h2>
+    {#if loading}
+      <div class="loading-wrapper">
+        <div class="spinner"></div>
+      </div>
+    {/if}
     {#if answer}
       <p>{ answer }</p>
     {/if}
   
   </div>
 </main>
+
+<style>
+  .loading-wrapper .spinner {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background-image: url();
+    border: 6px solid rgb(255 255 255 / 0.4);
+    border-radius: 50%;
+    border-top: 6px solid var(--primary);
+    animation: spin 1s linear infinite;
+    margin-inline: auto;
+  }
+  @keyframes spin {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
+</style>
