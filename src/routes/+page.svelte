@@ -6,11 +6,11 @@
 <form>
   <label for="game">Select game: </label>
   <select name="game" id="game">
-    <option value="Pokémon Blue">Pokémon Blue</option>
-    <option value="Pokémon Red">Pokémon Red</option>
-    <option value="Pokémon Yellow">Pokémon Yellow</option>
-    <option value="Pokémon Silver">Pokémon Silver</option>
-    <option value="Pokémon Gold">Pokémon Gold</option>
+    <option value="blue">Pokémon Blue</option>
+    <option value="red">Pokémon Red</option>
+    <option value="yellow">Pokémon Yellow</option>
+    <option value="silver">Pokémon Silver</option>
+    <option value="gold">Pokémon Gold</option>
   </select>
   <div class="field-group">
     <label for="opponent">Opponent: </label>
