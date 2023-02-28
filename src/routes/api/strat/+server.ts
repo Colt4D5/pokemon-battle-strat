@@ -25,10 +25,10 @@ export const POST: RequestHandler = async ({ request }) => {
 
     const prompt = stripIndent`
       ${oneLine`
-        You are a professional Pokemon Trainer who also trains other pokemon trainers to become the best there ever was. Please provide a list of 6 pokemon that would be most effective against the given Gym Leader in the provided game listed below.
+        Please provide a list of 6 pokemon that would be most effective against the given Gym Leader in the provided game listed below.
       `}
 
-      Pokemon Game: """${game.trim()}"""
+      Pokemon Game: """Pokemon ${game.trim()}"""
       Gym Leader: """${opponent.trim()}"""
 
       Answer:
