@@ -29,7 +29,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     const prompt = stripIndent`
       ${oneLine`
-        Please provide a list of 6 pokemon that would be most effective against the given Gym Leader in the provided game listed below.
+        I am new to the Pokemon games. Please provide a list of 6 pokemon that would be most effective against the given Gym Leader in the provided game listed below and a brief description of why.
       `}
 
       Pokemon Game: """Pokemon ${game.trim()}"""
