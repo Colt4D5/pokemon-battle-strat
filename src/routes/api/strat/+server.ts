@@ -16,10 +16,14 @@ export const POST: RequestHandler = async ({ request }) => {
     if (!requestData) {
       throw new Error('Request data missing...')
     }
-
+    
     const { game, opponent } = requestData
 
     if (!game) {
+      throw new Error("No game provided...");
+    }
+
+    if (!opponent) {
       throw new Error("No game provided...");
     }
 

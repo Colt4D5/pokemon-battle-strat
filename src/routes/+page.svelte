@@ -58,7 +58,7 @@
   <h1>Pokémon Battle Strategist</h1>
   <form on:submit|preventDefault={() => handleSubmit()}>
     <label for="game">Select game: </label>
-    <select name="game" id="game">
+    <select name="game" id="game" bind:value={game}>
       <option value="blue">Pokémon Blue</option>
       <option value="red">Pokémon Red</option>
       <option value="yellow">Pokémon Yellow</option>
@@ -67,7 +67,7 @@
     </select>
     <div class="field-group">
       <label for="opponent">Opponent: </label>
-      <input type="text" name="opponent" id="opponent">
+      <input type="text" name="opponent" id="opponent" bind:value={opponent}>
     </div> 
     <div class="field-group">
       <input type="submit" name="submit" id="submit" value="Submit">
